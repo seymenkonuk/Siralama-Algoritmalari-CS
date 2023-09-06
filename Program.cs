@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Siralama_Algoritmalari_CS
 {
@@ -7,12 +8,13 @@ namespace Siralama_Algoritmalari_CS
         static void Main(string[] args)
         {
             int[] dizi = { 5, 9, 1, 6, 518, 2, -6, 0, 12, 0};
-            SiralamaAlgoritmalari<int>.MergeSort(dizi, SiralamaTuru.Descending);
+            List<int> deneme = new List<int>(dizi);
 
-            foreach (var item in dizi)
-            {
+            deneme = deneme.BubbleSort();
+
+            foreach (var item in deneme)
                 Console.Write(item + " ");
-            }
+            
             Console.WriteLine();
 
             Console.ReadLine();
